@@ -1,15 +1,15 @@
 /*
  * Copyright (c) 2026 Louis Kent
  * All rights reserved.
- * Chord Chess
+ * ChordChess
  */
 
-package chordchess.shared.music;
+package chordchess.music;
 
 import java.util.ArrayList;
 
 public class ChordParser {
-    public Chord parseChord(String chordText) {
+    public static Chord parseChord(String chordText) {
         int currentIndex;
 
         Note root;

@@ -1,10 +1,12 @@
 /*
  * Copyright (c) 2026 Louis Kent
  * All rights reserved.
- * Chord Chess
+ * ChordChess
  */
 
-package chordchess.shared.music;
+package chordchess.music;
+
+import chordchess.util.ChordMapUtil;
 
 import java.util.ArrayList;
 
@@ -13,12 +15,14 @@ public class Chord {
     private final ChordQuality quality;
     private final ArrayList<Alteration> alterations;
     private final ArrayList<Note> notes;
+    private final int[] chroma;
 
     public Chord(Note root, ChordQuality quality, ArrayList<Alteration> alterations) {
         this.root = root;
         this.quality = quality;
         this.alterations = alterations;
-        this.notes = new ArrayList<>();
+        this.notes = generateNotes(root, quality, alterations);
+        this.chroma = ChordMapUtil.generateChroma(ChordMapUtil.applyAlterations(quality.getMap(), alterations), root);
     }
 
     public String format() {
@@ -45,4 +49,14 @@ public class Chord {
     public ArrayList<Note> getNotes() {
         return notes;
     }
+
+    public  int[] getChroma() {
+        return chroma;
+    }
+
+    private ArrayList<Note> generateNotes(Note root, ChordQuality quality, ArrayList<Alteration> alterations) {
+        return ChordMapUtil.generateNotes(ChordMapUtil.applyAlterations(quality.getMap(), alterations), root);
+    }
+
+
 }

@@ -7,4 +7,5 @@
 package chordchess.util;
 
 public enum Operation {
+    OR, XOR
 }

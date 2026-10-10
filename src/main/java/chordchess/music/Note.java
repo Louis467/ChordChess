@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2026 Louis Kent
  * All rights reserved.
- * Chord Chess
+ * ChordChess
  */
 
-package chordchess.shared.music;
+package chordchess.music;
 
 public enum Note {
     C(0, "C"),

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="21">
       <module name="client" target="21" />
       <module name="client.main" target="21" />
       <module name="client.test" target="21" />
+      <module name="server" target="21" />
+      <module name="server.main" target="21" />
+      <module name="server.test" target="21" />
+      <module name="shared" target="21" />
+      <module name="shared.main" target="21" />
+      <module name="shared.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
